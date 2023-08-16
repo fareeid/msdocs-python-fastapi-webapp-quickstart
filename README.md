@@ -10,6 +10,13 @@ products:
 
 # Deploy a Python (FastAPI) web app to Azure App Service - Sample Application
 
+Below are my steps:
+- [https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli)      -----------install Azure CLI
+- az login
+- az account set --subscription Allianz-dataplatform
+- az configure --defaults location=northeurope
+- az containerapp up --resource-group web-fastapi-aca-rg --name web-aca-app --ingress external --target-port 3100 --source .
+
 This is the sample FastAPI application for the Azure Quickstart [Deploy a Python (Django, Flask or FastAPI) web app to Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/quickstart-python). For instructions on how to create the Azure resources and deploy the application to Azure, refer to the Quickstart article.
 
 Sample applications are available for the other frameworks here:
